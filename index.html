@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find A Store | Pick-up-Point Locator | Pargo</title>
+    <meta name="description" content="Type in your South African postal code and quickly locate the most convenient Pargo drop-off and collect location near you. Use our intuitive online store locator to find your perfect parcel point.">
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+  </head>
+  <body >
+
+   
+      
+    <div class="container" ng-app="pargoApp" ng-controller="pargoCtrl">
+      <div class="row">
+        <div class="col-4">
+            Search: <input type="text" ng-model="allKeyword" />
+            <hr/>
+              <div ng-repeat="citie in Cities | filter: allKeyword">
+                <a href="#" ng-click="openInfoWindow($event, citie)">{{citie.attributes.name}} </a>
+                <p>({{citie.attributes.city}})</p>
+              </div>
+          </div>
+        <div class="col-8">
+          <div class="d-inline-block" id="googleMap"></div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCAYGi6hr4gz1UR78ePk46Bm_h_xpsxMqM&callback=angular.noop"></script>
+    <!--<script type="text/javascript" src="LocationDataController.js"></script>-->
+    <script type="text/javascript" src="controller.js"></script>
+        
+     
+  </body>
+</html>
