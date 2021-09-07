@@ -1,0 +1,220 @@
+/*!
+ * Start Bootstrap -  v1.0.0 ()
+ * Copyright 2013-2021 
+ * Licensed under  (https://github.com/BlackrockDigital/careers24-platform/blob/master/LICENSE)
+ */
+
+/*Custom fonts */
+@font-face {
+  font-family: 'Futura Std';
+  src: url("../fonts/FuturaStd-Book.woff2") format("woff2"), url("../fonts/FuturaStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  font-family: "Futura Std", Helvetica, Arial;
+}
+
+body:before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.bg-map {
+  position: fixed !important;
+  overflow: unset !important;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+}
+
+.header {
+  padding: 0 0 20px 0;
+}
+
+/* Google map styles */
+.gm-style-iw {
+  background: #fff200 !important;
+  color: #000;
+  padding: 20px !important;
+}
+
+.gm-style-iw h2 {
+  font-size: 14px;
+}
+
+.gm-style-iw p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.gm-style .gm-style-iw-t::after {
+  background: #fff200 !important;
+}
+
+.gm-ui-hover-effect {
+  top: 0px !important;
+  right: 0px !important;
+}
+
+.masthead {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.masthead .masthead-content {
+  position: relative;
+  max-width: 30rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.masthead .masthead-content h1, .masthead .masthead-content .h1 {
+  font-size: 2.5rem;
+}
+
+.masthead .masthead-content p {
+  font-size: 1.2rem;
+}
+
+.masthead .masthead-content p.locate-city {
+  font-size: 1rem;
+}
+
+.masthead .masthead-content p strong {
+  font-weight: 700;
+}
+
+.masthead .masthead-content input {
+  height: auto;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-color: #898989;
+}
+
+.masthead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.location-item {
+  color: #898989;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+.location-item a {
+  color: #898989;
+  text-decoration: none;
+}
+
+.location-item a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+hr {
+  color: #fff200;
+  opacity: 1;
+  height: 3px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #dedede !important;
+}
+
+.container-width {
+  position: relative;
+  height: 500px;
+  display: inline-block;
+  overflow-y: scroll;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100%;
+    width: 40vw;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .masthead .masthead-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+  .masthead .masthead-content h1, .masthead .masthead-content .h1 {
+    font-size: 1.8rem;
+    color: #000;
+  }
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masthead {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .masthead {
+    width: 40vw;
+  }
+  .masthead .masthead-content h1 {
+    font-size: 1.2rem;
+    color: #000;
+    text-align: center;
+  }
+  .header {
+    padding: 0 15px 20px 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .masthead .masthead-content {
+    max-width: 9rem;
+  }
+  .masthead .masthead-content h1 {
+    font-size: 1rem;
+  }
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+  .location-item a {
+    font-size: 14px;
+    line-height: 12px;
+  }
+}
