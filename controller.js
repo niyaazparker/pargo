@@ -102,6 +102,7 @@ var createMarker = function (info){
     
 } 
 
+var infoWindow = new google.maps.InfoWindow();
 
   // let cities = $scope.cities;
 
