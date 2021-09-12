@@ -7,35 +7,35 @@
     <title>Find A Store | Pick-up-Point Locator | Pargo</title>
     <meta name="description" content="Type in your South African postal code and quickly locate the most convenient Pargo drop-off and collect location near you. Use our intuitive online store locator to find your perfect parcel point.">
     <link rel="Shortcut Icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- Bootstrap v5.01-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Core theme CSS -->
     <link rel="stylesheet" href="css/style.css">
-   
   </head>
-  <body >
 
-   
-      
-    <div class="container" ng-app="pargoApp" ng-controller="pargoCtrl">
-      <div class="row">
-        <div class="col-4">
-            Search: <input type="text" ng-model="allKeyword" />
-            <hr/>
-              <div ng-repeat="citie in Cities | filter: allKeyword">
-                <a href="#" ng-click="openInfoWindow($event, citie)">{{citie.attributes.name}} </a>
-                <p>({{citie.attributes.city}})</p>
-              </div>
-          </div>
-        <div class="col-8">
-          <div class="d-inline-block" id="googleMap"></div>
+  <body>
+    <div class="bg-map" id="map"></div>
+    <div class="masthead" ng-app="pargoApp" ng-controller="pargoCtrl">
+      <div class="masthead-content text-white">
+        <div class="header">
+                  <div class="logo text-center w-100"><img src="images/logo.svg" width="150" height="150"/></div>
+                  <h1 class="lh-1 my-4">Find Your Pargo Parcel Point</h1>
+          <input class="form-control" placeholder="Search area" ng-model="searchText.city" />
         </div>
-    </div>
-
+        
+        <div class="container-fluid container-width px-4 px-lg-0">
+              <div class="location-item" ng-repeat="marker in markers | filter : searchText | orderBy : 'city'">
+                <a href="#" ng-click="openInfoWindow($event, marker)"><strong>{{marker.title}}</strong></a>
+                <p class="mb-0 locate-city">{{marker.city}}</p>
+              </div>
+        </div>
+      </div>
     </div>
 
     <script src="js/angular.min.js"></script>
     <script src="js/bootstrap.min.js" ></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCAYGi6hr4gz1UR78ePk46Bm_h_xpsxMqM&callback=angular.noop"></script>
-    <!--<script type="text/javascript" src="LocationDataController.js"></script>-->
+    <script type="text/javascript" src="LocationDataController.js"></script>
     <script type="text/javascript" src="controller.js"></script>
         
      
