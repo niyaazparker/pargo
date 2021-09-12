@@ -1,7 +1,7 @@
 {
-  "name": "careers24-platform",
+  "name": "Pargo locater",
   "version": "1.0.0",
-  "description": "* This contains the primary Careers24 product and all its dependent services.\r * Current live version is 1131",
+  "description": "",
   "dependencies": {
     "del": "^6.0.0",
     "gulp": "^4.0.2",
